@@ -1,0 +1,7 @@
+CASE WHEN comms_value = 'bad comms'
+      AND LAG(comms_value) OVER (PARTITION BY mpan ORDER BY report_date DESC) = 'in comms'
+     THEN 1
+     ELSE 0
+     END AS this_will_probably_break_somewhere
+
+SUM(this_will_probably_break_somewhere)
