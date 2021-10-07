@@ -5,3 +5,7 @@ CASE WHEN comms_value = 'bad comms'
      END AS this_will_probably_break_somewhere
 
 SUM(this_will_probably_break_somewhere)
+
+LAG() LEAD() OVER () PARTITOON 
+
+# test github
